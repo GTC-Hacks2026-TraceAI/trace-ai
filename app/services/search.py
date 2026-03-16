@@ -22,8 +22,12 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from datetime import datetime, timezone
 from typing import Any
+from typing import TYPE_CHECKING
 
 from app.models import Camera, Case, CameraFrame, Sighting
+
+if TYPE_CHECKING:
+    from app.services.nemotron_client import NemotronClient
 
 # ── Scoring weights ────────────────────────────────────────────────────────────
 # Easy to tune; must sum to 1.0 so the final score stays in [0, 1].
@@ -253,9 +257,11 @@ class MockSearchBackend(ISearchBackend):
         self,
         weights: dict[str, float] | None = None,
         reference_time: datetime | None = None,
+        nemotron_client: "NemotronClient | None" = None,
     ) -> None:
         self.weights = weights or DEFAULT_WEIGHTS
         self.reference_time = reference_time
+        self.nemotron_client = nemotron_client
 
     def rank_frames(
         self,
@@ -282,6 +288,12 @@ class MockSearchBackend(ISearchBackend):
                 continue
 
             explanation = build_explanation(confidence, features)
+            if self.nemotron_client is not None:
+                explanation = self.nemotron_client.generate_sighting_explanation(
+                    fallback=explanation,
+                    location=location,
+                    confidence=confidence,
+                )
 
             candidates.append(Sighting(
                 case_id=case.id,

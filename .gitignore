@@ -20,5 +20,6 @@ htmlcov/
 data/uploads/*
 !data/uploads/.gitkeep
 .env
+backend/.env
 .DS_Store
 Thumbs.db

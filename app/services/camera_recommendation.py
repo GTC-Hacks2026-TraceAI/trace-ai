@@ -18,8 +18,12 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 from typing import Optional
+from typing import TYPE_CHECKING
 
 from app.models import Camera, NextCameraRecommendation, RetentionUrgency, Sighting
+
+if TYPE_CHECKING:
+    from app.services.nemotron_client import NemotronClient
 
 # Zones ordered from north to south.  Used to infer travel direction.
 _ZONE_ORDER: list[str] = ["north", "central", "south"]
@@ -117,8 +121,13 @@ class NextCameraRecommendationService:
         includes an urgency warning.
     """
 
-    def __init__(self, retention_hours: float = DEFAULT_RETENTION_HOURS) -> None:
+    def __init__(
+        self,
+        retention_hours: float = DEFAULT_RETENTION_HOURS,
+        nemotron_client: "NemotronClient | None" = None,
+    ) -> None:
         self.retention_hours = retention_hours
+        self.nemotron_client = nemotron_client
 
     def recommend(
         self,
@@ -215,6 +224,10 @@ class NextCameraRecommendationService:
                 reason = self._build_reason(
                     nb, camera, sighting, direction, now, eff_retention,
                 )
+                if self.nemotron_client is not None:
+                    reason = self.nemotron_client.generate_recommendation_reason(
+                        fallback=reason,
+                    )
                 confidence = round(
                     min(1.0, sighting.similarity_score * score), 2,
                 )
