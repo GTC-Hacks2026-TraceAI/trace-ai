@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Spinner } from "@/components/ui/spinner"
 import type { Case } from "@/lib/types"
-import { User, MapPin, Clock, Shirt, Backpack, Search } from "lucide-react"
+import { User, MapPin, Shirt, Search } from "lucide-react"
 
 interface CaseSummaryProps {
   caseData: Case
@@ -55,49 +55,24 @@ export function CaseSummary({ caseData, onRunSearch, isSearching }: CaseSummaryP
               <MapPin className="h-4 w-4" />
               Last Known Location
             </div>
-            <p className="font-medium">{caseData.last_known_location}</p>
-          </div>
-          <div className="space-y-1">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Clock className="h-4 w-4" />
-              Last Seen
-            </div>
-            <p className="font-medium">{formatDate(caseData.last_known_time)}</p>
+            <p className="font-medium">{caseData.last_known_location ?? "—"}</p>
           </div>
         </div>
 
-        {caseData.approximate_age && (
+        {caseData.description && (
           <div className="space-y-1">
-            <div className="text-sm text-muted-foreground">Age</div>
-            <p className="font-medium">Approximately {caseData.approximate_age} years old</p>
+            <div className="text-sm text-muted-foreground">Description</div>
+            <p className="text-sm leading-relaxed">{caseData.description}</p>
           </div>
         )}
 
-        <div className="space-y-1">
-          <div className="text-sm text-muted-foreground">Description</div>
-          <p className="text-sm leading-relaxed">{caseData.description}</p>
-        </div>
-
-        {(caseData.clothing_description || caseData.accessories) && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {caseData.clothing_description && (
-              <div className="space-y-1">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Shirt className="h-4 w-4" />
-                  Clothing
-                </div>
-                <p className="text-sm">{caseData.clothing_description}</p>
-              </div>
-            )}
-            {caseData.accessories && (
-              <div className="space-y-1">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Backpack className="h-4 w-4" />
-                  Accessories
-                </div>
-                <p className="text-sm">{caseData.accessories}</p>
-              </div>
-            )}
+        {caseData.clothing && (
+          <div className="space-y-1">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Shirt className="h-4 w-4" />
+              Clothing
+            </div>
+            <p className="text-sm">{caseData.clothing}</p>
           </div>
         )}
 

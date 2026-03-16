@@ -2,15 +2,11 @@
 export interface Case {
   id: string
   subject_name: string
-  approximate_age: number | null
-  description: string
-  last_known_location: string
-  last_known_time: string
-  clothing_description: string | null
-  accessories: string | null
-  image_url: string | null
+  description: string | null
+  last_known_location: string | null
+  clothing: string | null
+  status: "open" | "closed"
   created_at: string
-  status: "open" | "closed" | "investigating"
 }
 
 export interface CaseInput {
@@ -28,39 +24,44 @@ export interface CaseInput {
 export interface Sighting {
   id: string
   case_id: string
-  camera_name: string
-  camera_location: string
+  camera_id: string
+  frame_id: string
   timestamp: string
-  confidence_score: number
+  location: string
+  similarity_score: number
   explanation: string
-  image_url: string | null
 }
 
 // Timeline types
-export interface TimelineEvent {
-  id: string
-  case_id: string
+export interface TimelineEntry {
   timestamp: string
+  camera_id: string
   camera_name: string
-  camera_location: string
-  confidence: number
+  location: string
+  frame_id: string
+  similarity_score: number
   explanation: string
 }
 
 export interface Timeline {
-  events: TimelineEvent[]
-  summary: string
+  case_id: string
+  subject_name: string
+  entries: TimelineEntry[]
+  summary: string | null
 }
 
 // Camera recommendation types
-export type UrgencyLevel = "critical" | "high" | "medium" | "low"
+export type UrgencyLevel = "high" | "medium" | "low"
 
 export interface CameraRecommendation {
-  id: string
+  camera_id: string
   camera_name: string
-  camera_location: string
+  location: string
+  zone: string
+  priority: number
   reason: string
-  urgency: UrgencyLevel
+  confidence: number | null
+  urgency_level: UrgencyLevel | null
   review_before: string | null
 }
 
@@ -70,7 +71,3 @@ export interface ApiResponse<T> {
   error: string | null
 }
 
-export interface SearchResponse {
-  sightings: Sighting[]
-  search_completed: boolean
-}

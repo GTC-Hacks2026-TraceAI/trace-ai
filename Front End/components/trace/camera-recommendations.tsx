@@ -11,18 +11,15 @@ interface CameraRecommendationsProps {
   hasSearched: boolean
 }
 
-const urgencyOrder = { critical: 0, high: 1, medium: 2, low: 3 }
-
 export function CameraRecommendations({
   recommendations,
   hasSearched,
 }: CameraRecommendationsProps) {
   const sortedRecommendations = [...recommendations].sort(
-    (a, b) => urgencyOrder[a.urgency] - urgencyOrder[b.urgency]
+    (a, b) => a.priority - b.priority
   )
 
-  const criticalCount = recommendations.filter((r) => r.urgency === "critical").length
-  const highCount = recommendations.filter((r) => r.urgency === "high").length
+  const highCount = recommendations.filter((r) => r.urgency_level === "high").length
 
   return (
     <Card>
@@ -33,7 +30,7 @@ export function CameraRecommendations({
         </CardTitle>
         <CardDescription>
           {recommendations.length > 0
-            ? `${recommendations.length} cameras to review • ${criticalCount} critical • ${highCount} high priority`
+            ? `${recommendations.length} cameras to review • ${highCount} high priority`
             : "Recommended cameras to check next"}
         </CardDescription>
       </CardHeader>
@@ -53,7 +50,7 @@ export function CameraRecommendations({
         ) : (
           <div className="space-y-3">
             {sortedRecommendations.map((rec) => (
-              <RecommendationCard key={rec.id} recommendation={rec} />
+              <RecommendationCard key={rec.camera_id} recommendation={rec} />
             ))}
           </div>
         )}

@@ -9,10 +9,6 @@ interface RecommendationCardProps {
 }
 
 const urgencyConfig: Record<UrgencyLevel, { color: string; label: string }> = {
-  critical: {
-    color: "bg-red-500/20 text-red-400 border-red-500/30",
-    label: "Critical",
-  },
   high: {
     color: "bg-orange-500/20 text-orange-400 border-orange-500/30",
     label: "High",
@@ -27,6 +23,8 @@ const urgencyConfig: Record<UrgencyLevel, { color: string; label: string }> = {
   },
 }
 
+const defaultUrgencyConfig = { color: "bg-muted text-muted-foreground border-border", label: "Unspecified" }
+
 export function RecommendationCard({ recommendation }: RecommendationCardProps) {
   const formatTime = (timestamp: string) => {
     return new Date(timestamp).toLocaleString("en-US", {
@@ -37,13 +35,14 @@ export function RecommendationCard({ recommendation }: RecommendationCardProps) 
     })
   }
 
-  const urgency = urgencyConfig[recommendation.urgency]
+  const urgency = recommendation.urgency_level
+    ? urgencyConfig[recommendation.urgency_level] ?? defaultUrgencyConfig
+    : defaultUrgencyConfig
 
   return (
     <Card className={cn(
       "transition-all",
-      recommendation.urgency === "critical" && "border-red-500/30",
-      recommendation.urgency === "high" && "border-orange-500/30"
+      recommendation.urgency_level === "high" && "border-orange-500/30"
     )}>
       <CardContent className="p-4">
         <div className="flex items-start justify-between gap-4 mb-3">
@@ -51,15 +50,17 @@ export function RecommendationCard({ recommendation }: RecommendationCardProps) 
             <Camera className="h-4 w-4 text-muted-foreground" />
             <span className="font-medium">{recommendation.camera_name}</span>
           </div>
-          <Badge variant="outline" className={cn("flex-shrink-0", urgency.color)}>
-            <AlertTriangle className="h-3 w-3 mr-1" />
-            {urgency.label}
-          </Badge>
+          {recommendation.urgency_level && (
+            <Badge variant="outline" className={cn("flex-shrink-0", urgency.color)}>
+              <AlertTriangle className="h-3 w-3 mr-1" />
+              {urgency.label}
+            </Badge>
+          )}
         </div>
 
         <div className="flex items-center gap-1 text-sm text-muted-foreground mb-2">
           <MapPin className="h-3 w-3" />
-          {recommendation.camera_location}
+          {recommendation.location}
         </div>
 
         <p className="text-sm text-muted-foreground mb-3">

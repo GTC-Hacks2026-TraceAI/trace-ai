@@ -62,9 +62,9 @@ export default function CaseWorkspacePage({ params }: PageProps) {
     setError(null)
 
     try {
-      // Run search
-      const searchResult = await runFootageSearch(caseId)
-      setSightings(searchResult.sightings)
+      // Run search — backend returns Sighting[] directly
+      const sightings = await runFootageSearch(caseId)
+      setSightings(sightings)
       setHasSearched(true)
 
       // Load timeline and recommendations in parallel

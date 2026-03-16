@@ -1,10 +1,10 @@
 import { Badge } from "@/components/ui/badge"
-import type { TimelineEvent as TimelineEventType } from "@/lib/types"
+import type { TimelineEntry } from "@/lib/types"
 import { MapPin } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface TimelineEventProps {
-  event: TimelineEventType
+  event: TimelineEntry
   isLast: boolean
 }
 
@@ -16,9 +16,9 @@ export function TimelineEvent({ event, isLast }: TimelineEventProps) {
     })
   }
 
-  const getConfidenceColor = (confidence: number) => {
-    if (confidence >= 0.8) return "bg-emerald-500"
-    if (confidence >= 0.6) return "bg-amber-500"
+  const getConfidenceColor = (score: number) => {
+    if (score >= 0.8) return "bg-emerald-500"
+    if (score >= 0.6) return "bg-amber-500"
     return "bg-red-500"
   }
 
@@ -26,7 +26,7 @@ export function TimelineEvent({ event, isLast }: TimelineEventProps) {
     <div className="flex gap-4">
       {/* Timeline connector */}
       <div className="flex flex-col items-center">
-        <div className={cn("w-3 h-3 rounded-full", getConfidenceColor(event.confidence))} />
+        <div className={cn("w-3 h-3 rounded-full", getConfidenceColor(event.similarity_score))} />
         {!isLast && <div className="w-0.5 flex-1 bg-border mt-1" />}
       </div>
 
@@ -35,12 +35,12 @@ export function TimelineEvent({ event, isLast }: TimelineEventProps) {
         <div className="flex items-center gap-2 mb-1">
           <span className="font-medium">{formatTime(event.timestamp)}</span>
           <Badge variant="outline" className="text-xs">
-            {Math.round(event.confidence * 100)}%
+            {Math.round(event.similarity_score * 100)}%
           </Badge>
         </div>
         <div className="flex items-center gap-1 text-sm text-muted-foreground mb-1">
           <MapPin className="h-3 w-3" />
-          {event.camera_location}
+          {event.location}
           <span className="text-xs">({event.camera_name})</span>
         </div>
         <p className="text-sm text-muted-foreground">{event.explanation}</p>

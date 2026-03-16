@@ -12,8 +12,8 @@ interface TimelinePanelProps {
 }
 
 export function TimelinePanel({ timeline, hasSearched }: TimelinePanelProps) {
-  const sortedEvents = timeline?.events
-    ? [...timeline.events].sort(
+  const sortedEntries = timeline?.entries
+    ? [...timeline.entries].sort(
         (a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()
       )
     : []
@@ -36,7 +36,7 @@ export function TimelinePanel({ timeline, hasSearched }: TimelinePanelProps) {
             title="Timeline not available"
             description="Run a footage search to generate a movement timeline."
           />
-        ) : !timeline || sortedEvents.length === 0 ? (
+        ) : !timeline || sortedEntries.length === 0 ? (
           <EmptyState
             icon={Route}
             title="No movement data"
@@ -50,11 +50,11 @@ export function TimelinePanel({ timeline, hasSearched }: TimelinePanelProps) {
               </div>
             )}
             <div className="pt-2">
-              {sortedEvents.map((event, idx) => (
+              {sortedEntries.map((entry, idx) => (
                 <TimelineEvent
-                  key={event.id}
-                  event={event}
-                  isLast={idx === sortedEvents.length - 1}
+                  key={`${entry.camera_id}-${entry.timestamp}`}
+                  event={entry}
+                  isLast={idx === sortedEntries.length - 1}
                 />
               ))}
             </div>
