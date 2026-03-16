@@ -13,11 +13,11 @@ interface CandidateSightingsProps {
 
 export function CandidateSightings({ sightings, hasSearched }: CandidateSightingsProps) {
   const sortedSightings = [...sightings].sort(
-    (a, b) => b.confidence_score - a.confidence_score
+    (a, b) => b.similarity_score - a.similarity_score
   )
 
-  const highConfidence = sortedSightings.filter((s) => s.confidence_score >= 0.8)
-  const otherSightings = sortedSightings.filter((s) => s.confidence_score < 0.8)
+  const highConfidence = sortedSightings.filter((s) => s.similarity_score >= 0.8)
+  const otherSightings = sortedSightings.filter((s) => s.similarity_score < 0.8)
 
   return (
     <Card>

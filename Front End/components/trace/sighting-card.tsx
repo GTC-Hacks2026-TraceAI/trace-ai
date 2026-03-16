@@ -34,23 +34,15 @@ export function SightingCard({ sighting, rank }: SightingCardProps) {
   return (
     <Card className={cn(
       "transition-all hover:border-primary/50",
-      sighting.confidence_score >= 0.8 && "border-emerald-500/30"
+      sighting.similarity_score >= 0.8 && "border-emerald-500/30"
     )}>
       <CardContent className="p-4">
         <div className="flex gap-4">
           {/* Thumbnail placeholder */}
           <div className="relative w-28 h-20 rounded-md bg-muted flex-shrink-0 overflow-hidden">
-            {sighting.image_url ? (
-              <img
-                src={sighting.image_url}
-                alt={`Sighting from ${sighting.camera_name}`}
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                <Camera className="h-8 w-8" />
-              </div>
-            )}
+            <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+              <Camera className="h-8 w-8" />
+            </div>
             <div className="absolute top-1 left-1 bg-background/90 text-xs font-bold px-1.5 py-0.5 rounded">
               #{rank}
             </div>
@@ -61,18 +53,18 @@ export function SightingCard({ sighting, rank }: SightingCardProps) {
             <div className="flex items-start justify-between gap-2">
               <div className="flex items-center gap-2 text-sm font-medium truncate">
                 <Camera className="h-4 w-4 flex-shrink-0 text-muted-foreground" />
-                {sighting.camera_name}
+                {sighting.camera_id}
               </div>
-              <Badge variant="outline" className={cn("flex-shrink-0", getConfidenceColor(sighting.confidence_score))}>
+              <Badge variant="outline" className={cn("flex-shrink-0", getConfidenceColor(sighting.similarity_score))}>
                 <TrendingUp className="h-3 w-3 mr-1" />
-                {Math.round(sighting.confidence_score * 100)}% {getConfidenceLabel(sighting.confidence_score)}
+                {Math.round(sighting.similarity_score * 100)}% {getConfidenceLabel(sighting.similarity_score)}
               </Badge>
             </div>
 
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1">
                 <MapPin className="h-3 w-3" />
-                {sighting.camera_location}
+                {sighting.location}
               </span>
               <span className="flex items-center gap-1">
                 <Clock className="h-3 w-3" />

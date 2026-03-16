@@ -4,7 +4,6 @@ import type {
   Sighting,
   Timeline,
   CameraRecommendation,
-  SearchResponse,
 } from "./types"
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"
@@ -36,9 +35,15 @@ export async function checkHealth(): Promise<{ status: string }> {
 
 // Case operations
 export async function createCase(caseData: CaseInput): Promise<Case> {
+  const payload = {
+    subject_name: caseData.subject_name,
+    description: caseData.description || undefined,
+    last_known_location: caseData.last_known_location || undefined,
+    clothing: caseData.clothing_description || undefined,
+  }
   return fetchApi("/cases", {
     method: "POST",
-    body: JSON.stringify(caseData),
+    body: JSON.stringify(payload),
   })
 }
 
@@ -50,8 +55,8 @@ export async function getCase(caseId: string): Promise<Case> {
   return fetchApi(`/cases/${caseId}`)
 }
 
-// Search operations
-export async function runFootageSearch(caseId: string): Promise<SearchResponse> {
+// Search operations — backend returns Sighting[] directly
+export async function runFootageSearch(caseId: string): Promise<Sighting[]> {
   return fetchApi(`/cases/${caseId}/search`, {
     method: "POST",
   })

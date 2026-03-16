@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import type { Case } from "@/lib/types"
-import { User, MapPin, Clock, ChevronRight } from "lucide-react"
+import { User, MapPin, ChevronRight } from "lucide-react"
 
 interface CaseCardProps {
   caseData: Case
@@ -14,15 +14,6 @@ export function CaseCard({ caseData }: CaseCardProps) {
       month: "short",
       day: "numeric",
       year: "numeric",
-    })
-  }
-
-  const formatTime = (dateString: string) => {
-    return new Date(dateString).toLocaleString("en-US", {
-      month: "short",
-      day: "numeric",
-      hour: "numeric",
-      minute: "2-digit",
     })
   }
 
@@ -54,14 +45,12 @@ export function CaseCard({ caseData }: CaseCardProps) {
             {caseData.description}
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1">
-              <MapPin className="h-3 w-3" />
-              {caseData.last_known_location}
-            </span>
-            <span className="flex items-center gap-1">
-              <Clock className="h-3 w-3" />
-              {formatTime(caseData.last_known_time)}
-            </span>
+            {caseData.last_known_location && (
+              <span className="flex items-center gap-1">
+                <MapPin className="h-3 w-3" />
+                {caseData.last_known_location}
+              </span>
+            )}
           </div>
           <div className="flex items-center text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
             View case details
