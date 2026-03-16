@@ -8,8 +8,12 @@ with a plain-English path summary.
 from __future__ import annotations
 
 from typing import Protocol, runtime_checkable
+from typing import TYPE_CHECKING
 
 from app.models import Camera, Sighting, Timeline, TimelineEntry
+
+if TYPE_CHECKING:
+    from app.services.nemotron_client import NemotronClient
 
 # Default minimum confidence threshold.  Sightings below this value are
 # treated as too uncertain to include in the timeline.
@@ -93,8 +97,13 @@ class TimelineService:
         )
     """
 
-    def __init__(self, min_confidence: float = DEFAULT_MIN_CONFIDENCE) -> None:
+    def __init__(
+        self,
+        min_confidence: float = DEFAULT_MIN_CONFIDENCE,
+        nemotron_client: "NemotronClient | None" = None,
+    ) -> None:
         self.min_confidence = min_confidence
+        self.nemotron_client = nemotron_client
 
     def build(
         self,
@@ -144,6 +153,11 @@ class TimelineService:
 
         # Step 4: infer path summary
         summary = _build_summary(entries)
+        if self.nemotron_client is not None:
+            summary = self.nemotron_client.generate_timeline_summary(
+                fallback=summary,
+                entry_count=len(entries),
+            )
 
         return Timeline(
             case_id=case_id,

@@ -101,6 +101,19 @@ source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+### Optional: enable NVIDIA Nemotron enhancements
+
+Create either `backend/.env` or `.env` with:
+
+```bash
+NEMOTRON_API_KEY=...
+NEMOTRON_MODEL=...
+NVIDIA_API_BASE=...
+```
+
+If these variables are missing or the API call fails, Trace AI keeps running and
+automatically falls back to deterministic local explanations.
+
 ---
 
 ## Running the server
