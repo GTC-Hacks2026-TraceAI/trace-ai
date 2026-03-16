@@ -1,0 +1,7 @@
+{
+  "_comment": "Example missing-person case payload for Trace AI demo. POST this body to /cases to create the case.",
+  "subject_name": "Alex Rivera",
+  "description": "Male, approximately 22 years old, medium build, dark hair, approximately 5'10\". Last seen heading south from the main campus entrance around 08:00.",
+  "last_known_location": "North Campus - Main Entrance Gate",
+  "clothing": "Red hoodie, black backpack, dark blue jeans, white sneakers"
+}

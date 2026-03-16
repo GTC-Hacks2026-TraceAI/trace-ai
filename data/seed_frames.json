@@ -1,0 +1,642 @@
+[
+  {
+    "id": "frame-001",
+    "camera_id": "cam-001",
+    "timestamp": "2026-03-15T08:00:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-day",
+      "clothing_colors": ["navy", "white"],
+      "accessories": ["bag"],
+      "shoes": "white sneakers",
+      "direction": "inbound",
+      "zone": "north",
+      "text_tags": ["navy jacket", "white shirt", "white sneakers", "messenger bag"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-002",
+    "camera_id": "cam-001",
+    "timestamp": "2026-03-15T08:02:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-day",
+      "clothing_colors": ["red", "black", "blue"],
+      "accessories": ["backpack"],
+      "shoes": "white sneakers",
+      "direction": "inbound",
+      "zone": "north",
+      "text_tags": ["red hoodie", "black backpack", "dark blue jeans", "white sneakers"],
+      "face_match_score": 0.78
+    }
+  },
+  {
+    "id": "frame-003",
+    "camera_id": "cam-002",
+    "timestamp": "2026-03-15T08:04:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-parking",
+      "clothing_colors": ["red", "gray"],
+      "accessories": ["sunglasses"],
+      "shoes": "brown boots",
+      "direction": "inbound",
+      "zone": "north",
+      "text_tags": ["red jacket", "gray pants", "brown boots", "sunglasses"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-004",
+    "camera_id": "cam-001",
+    "timestamp": "2026-03-15T08:07:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-day",
+      "clothing_colors": ["black", "white"],
+      "accessories": ["cap"],
+      "shoes": "black sneakers",
+      "direction": "inbound",
+      "zone": "north",
+      "text_tags": ["black hoodie", "white t-shirt", "black sneakers", "black cap"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-005",
+    "camera_id": "cam-003",
+    "timestamp": "2026-03-15T08:08:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "720p", "fps": 25, "scene": "exterior-transit",
+      "clothing_colors": ["green", "khaki"],
+      "accessories": ["backpack", "hat"],
+      "shoes": "hiking boots",
+      "direction": "outbound",
+      "zone": "north",
+      "text_tags": ["green parka", "khaki pants", "hiking boots", "gray backpack", "beanie hat"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-006",
+    "camera_id": "cam-003",
+    "timestamp": "2026-03-15T08:09:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "720p", "fps": 25, "scene": "exterior-transit",
+      "clothing_colors": ["blue", "white"],
+      "accessories": [],
+      "shoes": "loafers",
+      "direction": "inbound",
+      "zone": "north",
+      "text_tags": ["blue polo shirt", "white slacks", "loafers"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-007",
+    "camera_id": "cam-004",
+    "timestamp": "2026-03-15T08:09:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "interior-lobby",
+      "clothing_colors": ["red", "black", "blue"],
+      "accessories": ["backpack"],
+      "shoes": "white sneakers",
+      "direction": "inbound",
+      "zone": "central",
+      "text_tags": ["red hoodie", "black backpack", "dark blue jeans", "white sneakers"],
+      "face_match_score": 0.82
+    }
+  },
+  {
+    "id": "frame-008",
+    "camera_id": "cam-004",
+    "timestamp": "2026-03-15T08:11:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "interior-lobby",
+      "clothing_colors": ["purple", "black"],
+      "accessories": ["glasses"],
+      "shoes": "black flats",
+      "direction": "inbound",
+      "zone": "central",
+      "text_tags": ["purple sweater", "black jeans", "black flats", "glasses"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-009",
+    "camera_id": "cam-002",
+    "timestamp": "2026-03-15T08:11:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-parking",
+      "clothing_colors": ["red", "black"],
+      "accessories": [],
+      "shoes": "running shoes",
+      "direction": "inbound",
+      "zone": "north",
+      "text_tags": ["red jacket", "black leggings", "running shoes"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-010",
+    "camera_id": "cam-004",
+    "timestamp": "2026-03-15T08:14:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "interior-lobby",
+      "clothing_colors": ["orange", "gray"],
+      "accessories": ["backpack"],
+      "shoes": "white sneakers",
+      "direction": "inbound",
+      "zone": "central",
+      "text_tags": ["orange t-shirt", "gray joggers", "white sneakers", "gray backpack"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-011",
+    "camera_id": "cam-006",
+    "timestamp": "2026-03-15T08:14:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "720p", "fps": 25, "scene": "exterior-entrance",
+      "clothing_colors": ["beige", "brown"],
+      "accessories": ["bag", "scarf"],
+      "shoes": "ankle boots",
+      "direction": "inbound",
+      "zone": "central",
+      "text_tags": ["beige coat", "brown scarf", "ankle boots", "leather bag"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-012",
+    "camera_id": "cam-005",
+    "timestamp": "2026-03-15T08:15:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "interior-cafeteria",
+      "clothing_colors": ["black", "gray"],
+      "accessories": ["backpack"],
+      "shoes": "black sneakers",
+      "direction": "inbound",
+      "zone": "central",
+      "text_tags": ["dark hoodie", "black backpack", "gray jeans", "black sneakers"],
+      "face_match_score": 0.45
+    }
+  },
+  {
+    "id": "frame-013",
+    "camera_id": "cam-001",
+    "timestamp": "2026-03-15T08:15:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-day",
+      "clothing_colors": ["yellow", "blue"],
+      "accessories": ["cap"],
+      "shoes": "white sneakers",
+      "direction": "outbound",
+      "zone": "north",
+      "text_tags": ["yellow rain jacket", "blue jeans", "white sneakers", "cap"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-014",
+    "camera_id": "cam-006",
+    "timestamp": "2026-03-15T08:16:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "720p", "fps": 25, "scene": "exterior-entrance",
+      "clothing_colors": ["red", "black", "blue"],
+      "accessories": ["backpack"],
+      "shoes": "white sneakers",
+      "direction": "inbound",
+      "zone": "central",
+      "text_tags": ["red hoodie", "black backpack", "dark blue jeans", "white sneakers"],
+      "face_match_score": 0.75
+    }
+  },
+  {
+    "id": "frame-015",
+    "camera_id": "cam-006",
+    "timestamp": "2026-03-15T08:17:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "720p", "fps": 25, "scene": "exterior-entrance",
+      "clothing_colors": ["white", "navy"],
+      "accessories": ["purse"],
+      "shoes": "heels",
+      "direction": "inbound",
+      "zone": "central",
+      "text_tags": ["white blouse", "navy skirt", "heels", "purse"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-016",
+    "camera_id": "cam-005",
+    "timestamp": "2026-03-15T08:18:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "interior-cafeteria",
+      "clothing_colors": ["gray", "blue"],
+      "accessories": ["glasses"],
+      "shoes": "blue sneakers",
+      "direction": "inbound",
+      "zone": "central",
+      "text_tags": ["gray crewneck", "blue jeans", "blue sneakers", "glasses"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-017",
+    "camera_id": "cam-004",
+    "timestamp": "2026-03-15T08:18:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "interior-lobby",
+      "clothing_colors": ["maroon", "gray"],
+      "accessories": ["backpack", "cap"],
+      "shoes": "gray sneakers",
+      "direction": "outbound",
+      "zone": "central",
+      "text_tags": ["maroon hoodie", "gray joggers", "gray sneakers", "gray backpack", "cap"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-018",
+    "camera_id": "cam-006",
+    "timestamp": "2026-03-15T08:20:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "720p", "fps": 25, "scene": "exterior-entrance",
+      "clothing_colors": ["white", "black"],
+      "accessories": ["backpack"],
+      "shoes": "white sneakers",
+      "direction": "outbound",
+      "zone": "central",
+      "text_tags": ["white t-shirt", "black backpack", "black jeans", "white sneakers"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-019",
+    "camera_id": "cam-007",
+    "timestamp": "2026-03-15T08:21:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-walkway",
+      "clothing_colors": ["blue", "gray"],
+      "accessories": ["backpack"],
+      "shoes": "gray sneakers",
+      "direction": "inbound",
+      "zone": "east",
+      "text_tags": ["blue denim jacket", "gray hoodie", "gray jeans", "gray sneakers", "gray backpack"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-020",
+    "camera_id": "cam-005",
+    "timestamp": "2026-03-15T08:22:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "interior-cafeteria",
+      "clothing_colors": ["pink", "white"],
+      "accessories": ["bag"],
+      "shoes": "sandals",
+      "direction": "outbound",
+      "zone": "central",
+      "text_tags": ["pink hoodie", "white shorts", "sandals", "tote bag"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-021",
+    "camera_id": "cam-007",
+    "timestamp": "2026-03-15T08:23:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-walkway",
+      "clothing_colors": ["black", "white"],
+      "accessories": ["sunglasses"],
+      "shoes": "white sneakers",
+      "direction": "outbound",
+      "zone": "east",
+      "text_tags": ["black coat", "white shirt", "white sneakers", "sunglasses"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-022",
+    "camera_id": "cam-007",
+    "timestamp": "2026-03-15T08:24:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-walkway",
+      "clothing_colors": ["red", "black", "blue"],
+      "accessories": ["backpack"],
+      "shoes": "white sneakers",
+      "direction": "inbound",
+      "zone": "east",
+      "text_tags": ["red hoodie", "black backpack", "dark blue jeans", "white sneakers"],
+      "face_match_score": 0.79
+    }
+  },
+  {
+    "id": "frame-023",
+    "camera_id": "cam-002",
+    "timestamp": "2026-03-15T08:26:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-parking",
+      "clothing_colors": ["black", "blue"],
+      "accessories": ["glasses"],
+      "shoes": "dress shoes",
+      "direction": "inbound",
+      "zone": "north",
+      "text_tags": ["black blazer", "blue dress shirt", "dress shoes", "glasses"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-024",
+    "camera_id": "cam-007",
+    "timestamp": "2026-03-15T08:27:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-walkway",
+      "clothing_colors": ["red", "gray"],
+      "accessories": ["bag"],
+      "shoes": "red sneakers",
+      "direction": "outbound",
+      "zone": "east",
+      "text_tags": ["red scarf", "gray jacket", "gray jeans", "red sneakers", "tote bag"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-025",
+    "camera_id": "cam-004",
+    "timestamp": "2026-03-15T08:28:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "interior-lobby",
+      "clothing_colors": ["green", "black"],
+      "accessories": ["backpack"],
+      "shoes": "black boots",
+      "direction": "outbound",
+      "zone": "central",
+      "text_tags": ["green vest", "black long-sleeve shirt", "black boots", "black backpack"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-026",
+    "camera_id": "cam-008",
+    "timestamp": "2026-03-15T08:29:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "720p", "fps": 25, "scene": "interior-lobby",
+      "clothing_colors": ["brown", "khaki"],
+      "accessories": ["glasses", "hat"],
+      "shoes": "loafers",
+      "direction": "inbound",
+      "zone": "east",
+      "text_tags": ["brown cardigan", "khaki pants", "loafers", "glasses", "flat cap"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-027",
+    "camera_id": "cam-005",
+    "timestamp": "2026-03-15T08:30:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "interior-cafeteria",
+      "clothing_colors": ["gray", "blue"],
+      "accessories": ["backpack"],
+      "shoes": "running shoes",
+      "direction": "outbound",
+      "zone": "central",
+      "text_tags": ["gray sweatshirt", "blue jeans", "running shoes", "blue backpack"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-028",
+    "camera_id": "cam-009",
+    "timestamp": "2026-03-15T08:30:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-plaza",
+      "clothing_colors": ["black", "white"],
+      "accessories": ["cap", "backpack"],
+      "shoes": "white sneakers",
+      "direction": "outbound",
+      "zone": "south",
+      "text_tags": ["black hoodie", "white joggers", "white sneakers", "black cap", "black backpack"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-029",
+    "camera_id": "cam-008",
+    "timestamp": "2026-03-15T08:31:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "720p", "fps": 25, "scene": "interior-lobby",
+      "clothing_colors": ["red", "black", "blue"],
+      "accessories": ["backpack"],
+      "shoes": "white sneakers",
+      "direction": "inbound",
+      "zone": "east",
+      "text_tags": ["red hoodie", "black backpack", "dark blue jeans", "white sneakers"],
+      "face_match_score": 0.71
+    }
+  },
+  {
+    "id": "frame-030",
+    "camera_id": "cam-007",
+    "timestamp": "2026-03-15T08:33:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-walkway",
+      "clothing_colors": ["navy", "white"],
+      "accessories": ["glasses", "bag"],
+      "shoes": "oxford shoes",
+      "direction": "inbound",
+      "zone": "east",
+      "text_tags": ["navy blazer", "white button-down", "oxford shoes", "leather bag", "glasses"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-031",
+    "camera_id": "cam-009",
+    "timestamp": "2026-03-15T08:33:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-plaza",
+      "clothing_colors": ["yellow", "blue"],
+      "accessories": [],
+      "shoes": "sandals",
+      "direction": "inbound",
+      "zone": "south",
+      "text_tags": ["yellow sundress", "blue cardigan", "sandals"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-032",
+    "camera_id": "cam-006",
+    "timestamp": "2026-03-15T08:35:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "720p", "fps": 25, "scene": "exterior-entrance",
+      "clothing_colors": ["orange", "black"],
+      "accessories": ["backpack"],
+      "shoes": "black sneakers",
+      "direction": "outbound",
+      "zone": "central",
+      "text_tags": ["orange hoodie", "black backpack", "black jeans", "black sneakers"],
+      "face_match_score": 0.42
+    }
+  },
+  {
+    "id": "frame-033",
+    "camera_id": "cam-008",
+    "timestamp": "2026-03-15T08:37:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "720p", "fps": 25, "scene": "interior-lobby",
+      "clothing_colors": ["blue", "gray"],
+      "accessories": ["cap"],
+      "shoes": "sneakers",
+      "direction": "outbound",
+      "zone": "east",
+      "text_tags": ["blue hoodie", "gray sweatpants", "sneakers", "blue cap"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-034",
+    "camera_id": "cam-009",
+    "timestamp": "2026-03-15T08:37:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-plaza",
+      "clothing_colors": ["red", "black", "blue"],
+      "accessories": ["backpack"],
+      "shoes": "white sneakers",
+      "direction": "outbound",
+      "zone": "south",
+      "text_tags": ["red hoodie", "black backpack", "dark blue jeans", "white sneakers"],
+      "face_match_score": 0.68
+    }
+  },
+  {
+    "id": "frame-035",
+    "camera_id": "cam-003",
+    "timestamp": "2026-03-15T08:38:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "720p", "fps": 25, "scene": "exterior-transit",
+      "clothing_colors": ["black", "white"],
+      "accessories": ["backpack"],
+      "shoes": "sneakers",
+      "direction": "outbound",
+      "zone": "north",
+      "text_tags": ["black puffer jacket", "white jeans", "sneakers", "black backpack"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-036",
+    "camera_id": "cam-010",
+    "timestamp": "2026-03-15T08:39:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-transit",
+      "clothing_colors": ["tan", "brown"],
+      "accessories": ["bag"],
+      "shoes": "loafers",
+      "direction": "outbound",
+      "zone": "south",
+      "text_tags": ["tan trench coat", "brown pants", "loafers", "leather bag"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-037",
+    "camera_id": "cam-009",
+    "timestamp": "2026-03-15T08:40:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-plaza",
+      "clothing_colors": ["gray", "pink"],
+      "accessories": ["purse"],
+      "shoes": "ballet flats",
+      "direction": "inbound",
+      "zone": "south",
+      "text_tags": ["gray peacoat", "pink scarf", "ballet flats", "black purse"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-038",
+    "camera_id": "cam-010",
+    "timestamp": "2026-03-15T08:40:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-transit",
+      "clothing_colors": ["black", "navy"],
+      "accessories": ["backpack", "cap"],
+      "shoes": "work boots",
+      "direction": "outbound",
+      "zone": "south",
+      "text_tags": ["black jacket", "navy work pants", "work boots", "gray backpack", "cap"],
+      "face_match_score": null
+    }
+  },
+  {
+    "id": "frame-039",
+    "camera_id": "cam-010",
+    "timestamp": "2026-03-15T08:42:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-transit",
+      "clothing_colors": ["red", "black", "blue"],
+      "accessories": ["backpack"],
+      "shoes": "white sneakers",
+      "direction": "outbound",
+      "zone": "south",
+      "text_tags": ["red hoodie", "black backpack", "dark blue jeans", "white sneakers"],
+      "face_match_score": 0.74
+    }
+  },
+  {
+    "id": "frame-040",
+    "camera_id": "cam-010",
+    "timestamp": "2026-03-15T08:44:00+00:00",
+    "thumbnail_url": null,
+    "metadata": {
+      "resolution": "1080p", "fps": 30, "scene": "exterior-transit",
+      "clothing_colors": ["white", "black"],
+      "accessories": ["umbrella"],
+      "shoes": "black sneakers",
+      "direction": "inbound",
+      "zone": "south",
+      "text_tags": ["white windbreaker", "black joggers", "black sneakers", "umbrella"],
+      "face_match_score": null
+    }
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "cam-001",
+    "name": "Main Entrance Gate",
+    "location": "North Campus - Main Entrance Gate",
+    "zone": "north",
+    "neighbors": ["cam-002", "cam-003"],
+    "latitude": 37.7750,
+    "longitude": -122.4183,
+    "location_label": "Building A – Main Gate",
+    "retention_hours": 72.0
+  },
+  {
+    "id": "cam-002",
+    "name": "Parking Lot A",
+    "location": "North Campus - Parking Lot A (West Side)",
+    "zone": "north",
+    "neighbors": ["cam-001", "cam-004"],
+    "latitude": 37.7748,
+    "longitude": -122.4192,
+    "location_label": "Building A – Parking Lot",
+    "retention_hours": 48.0
+  },
+  {
+    "id": "cam-003",
+    "name": "Hallway B1",
+    "location": "Building B - 1st Floor",
+    "zone": "central",
+    "neighbors": ["cam-001", "cam-005", "cam-006"],
+    "latitude": 37.7746,
+    "longitude": -122.4178,
+    "location_label": "Building B – First-Floor Corridor",
+    "retention_hours": 24.0
+  },
+  {
+    "id": "cam-004",
+    "name": "Cafeteria",
+    "location": "Building A - Ground Floor",
+    "zone": "north",
+    "neighbors": ["cam-002", "cam-005"],
+    "latitude": 37.7744,
+    "longitude": -122.4188,
+    "location_label": "Building A – Cafeteria",
+    "retention_hours": 24.0
+  },
+  {
+    "id": "cam-005",
+    "name": "Cafeteria",
+    "location": "Student Union Building - Cafeteria",
+    "zone": "central",
+    "neighbors": ["cam-003", "cam-004", "cam-007"],
+    "latitude": 37.7742,
+    "longitude": -122.4175,
+    "location_label": "Building C – Library Main Door",
+    "retention_hours": 48.0
+  },
+  {
+    "id": "cam-006",
+    "name": "South Exit",
+    "location": "Building B - Rear Door",
+    "zone": "south",
+    "neighbors": ["cam-003", "cam-007"],
+    "latitude": 37.7738,
+    "longitude": -122.4180,
+    "location_label": "Building B – South Rear Exit",
+    "retention_hours": 72.0
+  },
+  {
+    "id": "cam-007",
+    "name": "East Quad Walkway",
+    "location": "East Quad - Central Walkway",
+    "zone": "east",
+    "neighbors": ["cam-006", "cam-008", "cam-009"],
+    "latitude": 37.7752,
+    "longitude": -122.4162,
+    "location_label": "East Quad – Central Walkway"
+  },
+  {
+    "id": "cam-008",
+    "name": "Science Hall Lobby",
+    "location": "Langford Science Hall - Main Lobby",
+    "zone": "east",
+    "neighbors": ["cam-007", "cam-009"],
+    "latitude": 37.7748,
+    "longitude": -122.4158,
+    "location_label": "Langford Science Hall – Main Lobby"
+  },
+  {
+    "id": "cam-009",
+    "name": "South Plaza",
+    "location": "South Campus Plaza - Fountain Area",
+    "zone": "south",
+    "neighbors": ["cam-005", "cam-006", "cam-010"],
+    "latitude": 37.7735,
+    "longitude": -122.4172,
+    "location_label": "University Ave Bus Stop",
+    "retention_hours": 12.0
+  },
+  {
+    "id": "cam-010",
+    "name": "Transit Stop",
+    "location": "Bus Stop - University Ave",
+    "zone": "south",
+    "neighbors": ["cam-006", "cam-009"],
+    "latitude": 37.7732,
+    "longitude": -122.4168,
+    "location_label": "University Ave – Transit Stop",
+    "retention_hours": 12.0
+  }
+]
