@@ -54,12 +54,11 @@ class NemotronClient:
                 response = client.post(url, json=payload, headers=headers)
             response.raise_for_status()
             data = response.json()
-            text = (
-                data.get("choices", [{}])[0]
-                .get("message", {})
-                .get("content", "")
-                .strip()
-            )
+            try:
+                content = data["choices"][0]["message"]["content"]
+            except (KeyError, IndexError, TypeError):
+                content = None
+            text = (content or "").strip()
             if not text:
                 return {"ok": False, "text": "", "error": "empty_response"}
             return {"ok": True, "text": text, "error": None}
