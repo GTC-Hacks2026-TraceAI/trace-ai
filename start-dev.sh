@@ -8,7 +8,7 @@
 #   • Python 3.11+ with dependencies installed:
 #       pip install -r requirements.txt
 #   • Node.js 18+ with dependencies installed:
-#       cd "Front End" && npm install
+#       cd "Front End" && npm install --no-audit --progress=false
 #
 # Usage
 #   bash start-dev.sh
