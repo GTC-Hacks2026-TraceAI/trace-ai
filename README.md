@@ -86,7 +86,7 @@ search corridor based on confirmed sightings.
 
 ## Local setup
 
-**Prerequisites:** Python 3.11+
+**Prerequisites:** Python 3.11+, Node.js 18+
 
 ```bash
 # 1. Clone the repo (if you haven't already)
@@ -99,6 +99,25 @@ source .venv/bin/activate      # Windows: .venv\Scripts\activate
 
 # 3. Install dependencies
 pip install -r requirements.txt
+```
+
+### Frontend setup (Next.js)
+
+```bash
+cd "Front End"
+npm install --no-audit --progress=false
+```
+
+If `npm` looks stuck on downloads, this is usually first-run binary fetches for
+`next` (`@next/swc-*`) and image tooling (`sharp`). These are large optional
+packages and can take a while on slower networks. Workarounds:
+
+```bash
+# retry with longer network timeouts
+npm install --no-audit --progress=false --fetch-timeout=600000 --fetch-retries=5
+
+# if the network blocks optional binary downloads, use the JS fallback
+npm install --omit=optional --no-audit --progress=false
 ```
 
 ### Optional: enable NVIDIA Nemotron enhancements
