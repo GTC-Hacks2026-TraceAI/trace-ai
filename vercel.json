@@ -1,7 +1,7 @@
 {
   "framework": "nextjs",
-  "installCommand": "cd \"Front End\" && npm install",
-  "buildCommand": "cd \"Front End\" && npm run build",
-  "devCommand": "cd \"Front End\" && npm run dev",
-  "outputDirectory": "Front End/.next"
+  "rootDirectory": "Front End",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev"
 }
