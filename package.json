@@ -1,0 +1,12 @@
+{
+  "name": "trace-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix \"Front End\"",
+    "build": "npm run build --prefix \"Front End\"",
+    "start": "npm run start --prefix \"Front End\"",
+    "lint": "npm run lint --prefix \"Front End\"",
+    "postinstall": "cd \"Front End\" && npm install"
+  }
+}
